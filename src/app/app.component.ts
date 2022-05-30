@@ -3,8 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
-title = 'Angular';
+export class AppComponent {
+  public title = 'Angular';
+
+  public siteUrl = window.location.href;
+
+  myGreeting() {
+    return 'Hi, ' + this.title;
+  }
 }
